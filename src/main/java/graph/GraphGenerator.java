@@ -48,8 +48,8 @@ public final class GraphGenerator {
         while (added < m) {
             int a = rnd.nextInt(n);
             int b = rnd.nextInt(n);
-            if (b == a) {
-                continue;
+            while (b == a) {
+                b = rnd.nextInt(n);
             }
             g.addEdge(a, b, 1 + rnd.nextInt(1000));
             added++;
